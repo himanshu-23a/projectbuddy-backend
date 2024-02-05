@@ -51,13 +51,13 @@ app.use('/api/discussions', require('./routes/discussions'));
 
 // Set up Socket.IO connection
 io.on('connection', (socket) => {
-  console.log('Socket.IO: User connected');
+  //console.log('Socket.IO: User connected');
 
   socket.on('newDiscussion', (discussion) => {
-    console.log('Socket.IO: New Discussion Received', discussion);
-    console.log(`Socket joined room: ${discussion.projectId}`);
+    //console.log('Socket.IO: New Discussion Received', discussion);
+    //console.log(`Socket joined room: ${discussion.projectId}`);
     io.to(discussion.projectId).emit('newDiscussion', discussion);
-    console.log('Socket.IO: New Discussion Emitted from server', discussion);
+    //console.log('Socket.IO: New Discussion Emitted from server', discussion);
   });
 
   //Join Room
@@ -68,7 +68,7 @@ io.on('connection', (socket) => {
 
   // Handle disconnection
   socket.on('disconnect', () => {
-    console.log('Socket.IO: User disconnected');
+    //console.log('Socket.IO: User disconnected');
   });
 });
 
