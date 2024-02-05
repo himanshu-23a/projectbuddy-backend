@@ -6,6 +6,7 @@ const cors = require('cors');
 const http = require('http');
 const socketIO = require('socket.io');
 require('dotenv').config();
+const path = require("path");
 
 const server = http.createServer(app);
 //const io = socketIO(server);
@@ -29,6 +30,9 @@ app.use(cors(corsOptions));
 
 //app.use(cors());
 app.use(express.json());
+const _dirname = path.dirname("");
+const buildpath = path.join(_dirname,"../projectbuddy/build")
+app.use(express.static(buildpath));
 
 // Attach Socket.IO to the request object to access it in the routes
 app.use((req, res, next) => {
