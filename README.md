@@ -1,5 +1,6 @@
 # ProjectBuddy - Full stack MERN 
-Project Buddy is your go-to platform for collaborative project management and networking. Seamlessly connecting individuals with shared interests and skills, Project Buddy empowers users to initiate, join, and manage projects effortlessly.
+Project Buddy is your go-to platform for collaborative project management and networking. Seamlessly connecting individuals with shared interests and skills, Project Buddy empowers users to initiate, join, and manage projects effortlessly.<br>
+[Visit Website](https://projectbuddy.live/) 
 
 ## Development
 FrontEnd - React Js <br>
